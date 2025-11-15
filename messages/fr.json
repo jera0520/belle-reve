@@ -1,0 +1,115 @@
+{
+  "common": {
+    "brandName": "Belle Rêve",
+    "title": "Co-creation K-Beauty",
+    "tagline": "La rencontre de la K-Beauty et de la culture"
+  },
+  "nav": {
+    "home": "Accueil",
+    "editions": "Éditions",
+    "community": "Communauté",
+    "crowdfunding": "Financement participatif",
+    "about": "À propos"
+  },
+  "home": {
+    "hero": {
+      "title": "Édition Premium K-Beauty\nIncarnant Votre Culture",
+      "subtitle": "Beauté spéciale créée par co-création participative par pays",
+      "cta": "Explorer les éditions",
+      "ctaSecondary": "Rejoindre la communauté"
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "subtitle": "Combinant l'excellence de la K-Beauty et l'identité culturelle de chaque pays",
+      "description": "Une véritable marque de beauté mondiale créée avec des clients du monde entier"
+    },
+    "features": {
+      "feature1": {
+        "title": "Identité Culturelle",
+        "description": "Design reflétant la culture unique et l'esthétique de chaque pays"
+      },
+      "feature2": {
+        "title": "Développement Participatif",
+        "description": "Processus de co-création avec les clients locaux"
+      },
+      "feature3": {
+        "title": "K-Beauty Éprouvée",
+        "description": "Utilisation de la technologie et des ingrédients cosmétiques coréens excellents"
+      }
+    }
+  },
+  "editions": {
+    "title": "Éditions Culturelles",
+    "subtitle": "Éditions premium incarnant l'identité culturelle de chaque pays",
+    "viewDetails": "Voir les détails",
+    "inProgress": "En développement",
+    "comingSoon": "Bientôt disponible",
+    "locked": "Confidentiel",
+    "project": "Projet",
+    "japan": {
+      "name": "Essence Tout-en-Un Édition Limitée Japon",
+      "tagline": "Beauté Minimaliste & Propre",
+      "description": "Essence tout-en-un incarnant le minimalisme et la philosophie de beauté propre des clients japonais"
+    },
+    "france": {
+      "name": "Édition France",
+      "tagline": "Élégance et Art du Parfum",
+      "description": "Culture du parfum français et sensibilité au design élégant"
+    },
+    "usa": {
+      "name": "Édition États-Unis",
+      "tagline": "Praticité et Durabilité",
+      "description": "Produits pratiques grand format pour climat sec"
+    },
+    "sea": {
+      "name": "Édition Asie du Sud-Est",
+      "tagline": "Fraîcheur Tropicale",
+      "description": "Texture rafraîchissante pour climat chaud et humide"
+    }
+  },
+  "cocreation": {
+    "title": "La beauté que nous créons ensemble",
+    "subtitle": "Processus de co-création en 5 étapes",
+    "step1": {
+      "title": "Recherche utilisateur",
+      "description": "Entretiens avec les clients locaux et enquêtes"
+    },
+    "step2": {
+      "title": "Développement du prototype",
+      "description": "Production et test de 3 échantillons"
+    },
+    "step3": {
+      "title": "Test A/B",
+      "description": "Enquête de préférence des consommateurs par pays"
+    },
+    "step4": {
+      "title": "Co-création",
+      "description": "Réflexion des éléments culturels dans le design et le contenant"
+    },
+    "step5": {
+      "title": "Financement participatif",
+      "description": "Lancement mondial et début des ventes"
+    }
+  },
+  "community": {
+    "title": "Communauté",
+    "subtitle": "Une marque de beauté créée ensemble",
+    "joinCta": "Rejoindre la communauté",
+    "benefits": {
+      "title": "Avantages de la participation",
+      "benefit1": "Expérience prioritaire des nouveaux produits",
+      "benefit2": "Participation au processus de développement",
+      "benefit3": "Remises spéciales et récompenses"
+    }
+  },
+  "crowdfunding": {
+    "title": "Financement Participatif",
+    "subtitle": "La première édition que nous créons ensemble",
+    "status": "Financement en cours",
+    "goalAmount": "Objectif",
+    "currentAmount": "Atteint actuellement",
+    "backers": "Contributeurs",
+    "daysLeft": "Jours restants",
+    "supportNow": "Soutenir maintenant"
+  }
+}

@@ -1,0 +1,328 @@
+// Prisma Schema v2.0 - Co-creation Global K-Beauty Platform
+// SQLite for local development
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// 사용자 관리
+// ============================================
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String?
+  country       String?
+  locale        String   @default("ko")
+  role          String   @default("USER")
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  votes         Vote[]
+  surveyResponses SurveyResponse[]
+  fgdParticipations FGDParticipation[]
+  orders        Order[]
+}
+
+// ============================================
+// 제품 관리
+// ============================================
+
+model BaseProduct {
+  id            String   @id @default(cuid())
+  nameKo        String
+  nameEn        String
+  nameJa        String?
+  nameFr        String?
+  description   String
+  ingredients   String
+  technology    String
+  category      String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  editions      CulturalEdition[]
+}
+
+model CulturalEdition {
+  id                String   @id @default(cuid())
+  baseProductId     String
+  country           String
+  nameLocal         String
+  slug              String   @unique
+  status            String
+  
+  scent             String?
+  scentDescription  String?
+  packaging         String?
+  packagingImageUrl String?
+  localIngredients  String?
+  culturalStory     String?
+  designMotif       String?
+  
+  price             Int
+  priceLocal        Int?
+  currency          String   @default("KRW")
+  
+  step1FgdCompleted      Boolean  @default(false)
+  step2PrototypeReady    Boolean  @default(false)
+  step3AbTestCompleted   Boolean  @default(false)
+  step4DesignFinalized   Boolean  @default(false)
+  step5FundingLaunched   Boolean  @default(false)
+  
+  launchDate        DateTime?
+  estimatedDelivery DateTime?
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  baseProduct       BaseProduct @relation(fields: [baseProductId], references: [id])
+  abTests           ABTest[]
+  surveys           Survey[]
+  crowdfunding      CrowdfundingCampaign?
+  complianceChecks  ComplianceCheck[]
+}
+
+// ============================================
+// A/B 테스트
+// ============================================
+
+model ABTest {
+  id          String   @id @default(cuid())
+  editionId   String
+  testType    String
+  title       String
+  description String
+  variants    String
+  
+  startDate   DateTime
+  endDate     DateTime
+  
+  winner      String?
+  winnerVotes Int      @default(0)
+  totalVotes  Int      @default(0)
+  status      String   @default("ACTIVE")
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  edition     CulturalEdition @relation(fields: [editionId], references: [id], onDelete: Cascade)
+  votes       Vote[]
+}
+
+model Vote {
+  id          String   @id @default(cuid())
+  abTestId    String
+  userId      String
+  variantId   String
+  comment     String?
+  votedAt     DateTime @default(now())
+  
+  abTest      ABTest   @relation(fields: [abTestId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([abTestId, userId])
+}
+
+// ============================================
+// 설문
+// ============================================
+
+model Survey {
+  id          String   @id @default(cuid())
+  editionId   String
+  title       String
+  description String?
+  questions   String
+  
+  startDate   DateTime
+  endDate     DateTime
+  status      String   @default("ACTIVE")
+  
+  responseCount Int    @default(0)
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  edition     CulturalEdition @relation(fields: [editionId], references: [id], onDelete: Cascade)
+  responses   SurveyResponse[]
+}
+
+model SurveyResponse {
+  id          String   @id @default(cuid())
+  surveyId    String
+  userId      String
+  answers     String
+  submittedAt DateTime @default(now())
+  
+  survey      Survey   @relation(fields: [surveyId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([surveyId, userId])
+}
+
+// ============================================
+// FGD
+// ============================================
+
+model FGDSession {
+  id          String   @id @default(cuid())
+  title       String
+  country     String
+  scheduledAt DateTime
+  duration    Int
+  maxParticipants Int
+  currentParticipants Int @default(0)
+  
+  meetingUrl  String?
+  status      String   @default("SCHEDULED")
+  
+  summary     String?
+  notes       String?
+  insights    String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  participants FGDParticipation[]
+}
+
+model FGDParticipation {
+  id          String   @id @default(cuid())
+  fgdId       String
+  userId      String
+  status      String   @default("REGISTERED")
+  
+  feedback    String?
+  rating      Int?
+  
+  joinedAt    DateTime @default(now())
+  
+  fgd         FGDSession @relation(fields: [fgdId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@unique([fgdId, userId])
+}
+
+// ============================================
+// 크라우드펀딩
+// ============================================
+
+model CrowdfundingCampaign {
+  id          String   @id @default(cuid())
+  editionId   String   @unique
+  
+  platform    String
+  platformId  String?
+  platformUrl String?
+  
+  goal        Int
+  raised      Int      @default(0)
+  backers     Int      @default(0)
+  
+  startDate   DateTime
+  endDate     DateTime
+  
+  status      String   @default("UPCOMING")
+  
+  rewards     String
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  edition     CulturalEdition @relation(fields: [editionId], references: [id], onDelete: Cascade)
+}
+
+// ============================================
+// 규제 컴플라이언스
+// ============================================
+
+model ComplianceCheck {
+  id          String   @id @default(cuid())
+  editionId   String
+  country     String
+  checkType   String
+  
+  status      String   @default("PENDING")
+  
+  certifications String?
+  regulatoryBody String?
+  
+  checklist   String
+  
+  notes       String?
+  reviewedBy  String?
+  reviewedAt  DateTime?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  edition     CulturalEdition @relation(fields: [editionId], references: [id], onDelete: Cascade)
+}
+
+// ============================================
+// 주문
+// ============================================
+
+model Order {
+  id          String   @id @default(cuid())
+  userId      String
+  
+  orderNumber String   @unique
+  items       String
+  
+  subtotal    Int
+  shipping    Int      @default(0)
+  tax         Int      @default(0)
+  total       Int
+  currency    String   @default("KRW")
+  
+  shippingAddress String
+  
+  status      String   @default("PENDING")
+  paymentStatus String @default("PENDING")
+  
+  paymentMethod String?
+  paymentId   String?
+  
+  paidAt      DateTime?
+  shippedAt   DateTime?
+  deliveredAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  user        User     @relation(fields: [userId], references: [id])
+}
+
+// ============================================
+// 인플루언서
+// ============================================
+
+model Influencer {
+  id          String   @id @default(cuid())
+  name        String
+  country     String
+  platform    String
+  handle      String
+  profileUrl  String?
+  
+  followers   Int
+  engagementRate Float?
+  
+  tier        String
+  status      String   @default("PENDING")
+  
+  email       String?
+  phone       String?
+  
+  notes       String?
+  
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
