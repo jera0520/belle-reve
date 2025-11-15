@@ -3,6 +3,10 @@ import { notFound } from 'next/navigation';
 import ABTestVoting from '@/components/cocreation/ABTestVoting';
 import Link from 'next/link';
 
+export async function generateStaticParams() {
+  return [];
+}
+
 export default async function VotePage({
   params: { locale, id }
 }: {
