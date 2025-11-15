@@ -4,24 +4,12 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./lib/i18n/config.ts');
 
 const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    serverActions: {
-      bodySizeLimit: '2mb',
-    },
-  },
+  output: 'export',
+  basePath: '/andong-esg-beauty',
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**.cloudflare.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'cdn.yourdomain.com',
-      },
-    ],
+    unoptimized: true,
   },
+  reactStrictMode: true,
 };
 
 export default withNextIntl(nextConfig);
