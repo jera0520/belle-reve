@@ -1,96 +1,184 @@
-import { getAllEditions } from '@/lib/db/editions';
-import { calculateProgress } from '@/lib/db/editions';
-import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+'use client';
 
-export default async function EditionsPage({
-  params: { locale }
-}: {
-  params: { locale: string };
-}) {
-  const editions = await getAllEditions();
-  const t = await getTranslations('editions');
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useState } from 'react';
+
+export default function EditionsPage() {
+  const t = useTranslations('products.japan');
+  const [selectedImage, setSelectedImage] = useState(0);
+
+  const productImages = [
+    '/images/japan-essence-1.jpg',
+    '/images/japan-essence-2.jpg',
+    '/images/japan-essence-3.jpg'
+  ];
+
+  const features = [
+    { icon: '🌸', title: t('features.minimal.title'), desc: t('features.minimal.desc') },
+    { icon: '🍃', title: t('features.clean.title'), desc: t('features.clean.desc') },
+    { icon: '💧', title: t('features.hydration.title'), desc: t('features.hydration.desc') },
+    { icon: '🌿', title: t('features.natural.title'), desc: t('features.natural.desc') }
+  ];
+
+  const ingredients = [
+    { name: t('ingredients.rice.name'), benefit: t('ingredients.rice.benefit') },
+    { name: t('ingredients.sakura.name'), benefit: t('ingredients.sakura.benefit') },
+    { name: t('ingredients.greentea.name'), benefit: t('ingredients.greentea.benefit') },
+    { name: t('ingredients.ceramide.name'), benefit: t('ingredients.ceramide.benefit') }
+  ];
 
   return (
-    <div className="min-h-screen bg-[var(--cream-white)] py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-light text-center mb-4 text-[var(--french-navy)] tracking-wide" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-          {t('title')}
-        </h1>
-        <p className="text-xl text-[var(--soft-gray)] text-center mb-16 font-light">
-          {t('subtitle')}
-        </p>
+    <div className="min-h-screen bg-[var(--french-cream)] pt-24">
+      {/* Hero Section */}
+      <section className="py-16 px-6">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <span className="text-[var(--french-gold)] text-sm tracking-[0.3em] uppercase mb-4 block">
+              Japan Edition
+            </span>
+            <h1 className="text-6xl md:text-7xl font-light text-[var(--french-navy)] mb-6" 
+                style={{fontFamily: 'Cormorant Garamond, serif'}}>
+              {t('title')}
+            </h1>
+            <p className="text-xl text-[var(--french-gray)] max-w-3xl mx-auto leading-relaxed">
+              {t('subtitle')}
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {editions.map((edition) => {
-            const progress = calculateProgress(edition);
-            const countryFlag = {
-              JP: 'JP',
-              FR: 'FR',
-              US: 'US',
-              SEA: 'SEA',
-              KR: 'KR',
-            }[edition.country] || 'GLOBAL';
-            
-            // 일본 에디션에만 금색 테두리
-            const isJapan = edition.country === 'JP';
-            const borderClass = isJapan ? 'border-2 border-[var(--french-gold)]' : '';
-            
-            // 프랑스와 미국은 미공개 처리
-            const isComingSoon = edition.country === 'FR' || edition.country === 'US';
+          {/* Product Image Gallery */}
+          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+            <div>
+              <div className="bg-white p-8 mb-4">
+                <div className="aspect-square relative bg-gradient-to-br from-pink-50 to-blue-50 flex items-center justify-center">
+                  <span className="text-9xl">🌸</span>
+                </div>
+              </div>
+              <div className="grid grid-cols-3 gap-4">
+                {[0, 1, 2].map((idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedImage(idx)}
+                    className={`bg-white p-4 aspect-square flex items-center justify-center ${
+                      selectedImage === idx ? 'ring-2 ring-[var(--french-gold)]' : ''
+                    }`}
+                  >
+                    <span className="text-4xl">🌸</span>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-            return (
-              <Link
-                key={edition.id}
-                href={`/${locale}/editions/${edition.slug}`}
-                className={`bg-white shadow-md hover:shadow-xl transition-all overflow-hidden group ${borderClass} ${isComingSoon ? 'pointer-events-none' : ''} relative`}
-              >
-                {isComingSoon && (
-                  <div className="absolute inset-0 bg-white/80 backdrop-blur-sm z-20 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-xl font-light text-[var(--french-navy)] tracking-wider" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-                        Coming Soon
-                      </div>
-                    </div>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl font-light text-[var(--french-navy)] mb-4"
+                    style={{fontFamily: 'Cormorant Garamond, serif'}}>
+                  {t('description.title')}
+                </h2>
+                <p className="text-[var(--french-gray)] leading-relaxed mb-6">
+                  {t('description.text')}
+                </p>
+              </div>
+
+              <div className="border-t border-[var(--french-gold)]/20 pt-6">
+                <div className="flex justify-between items-center mb-6">
+                  <div>
+                    <p className="text-sm text-[var(--french-gray)] mb-1">Price</p>
+                    <p className="text-3xl font-light text-[var(--french-navy)]" 
+                       style={{fontFamily: 'Cormorant Garamond, serif'}}>
+                      ¥6,800
+                    </p>
                   </div>
-                )}
-                <div className={`bg-gradient-to-br from-[var(--french-navy)] to-[var(--soft-gray)] p-8 text-white relative overflow-hidden ${isComingSoon ? 'opacity-50' : ''}`}>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--french-gold)] opacity-10 rounded-full -mr-16 -mt-16"></div>
-                  <div className="flex justify-between items-start mb-4 relative z-10">
-                    <span className="text-6xl font-light" style={{fontFamily: 'Cormorant Garamond, serif'}}>{countryFlag}</span>
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-xs tracking-wider font-light">
-                      {edition.status}
-                    </span>
+                  <div>
+                    <p className="text-sm text-[var(--french-gray)] mb-1">Volume</p>
+                    <p className="text-3xl font-light text-[var(--french-navy)]"
+                       style={{fontFamily: 'Cormorant Garamond, serif'}}>
+                      50ml
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-light tracking-wide" style={{fontFamily: 'Cormorant Garamond, serif'}}>{edition.nameLocal}</h3>
                 </div>
 
-                <div className={`p-6 ${isComingSoon ? 'opacity-50' : ''}`}>
-                  <div className="mb-4">
-                    <div className="flex justify-between text-sm mb-2 font-light">
-                      <span className="text-[var(--soft-gray)]">{t('progress')}</span>
-                      <span className="font-normal text-[var(--french-gold)]">{progress}%</span>
-                    </div>
-                    <div className="w-full bg-gray-100 h-1">
-                      <div
-                        className="bg-[var(--french-gold)] h-1 transition-all"
-                        style={{ width: `${progress}%` }}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-4 border-t border-gray-100">
-                    <div className="text-2xl font-light text-[var(--french-navy)]" style={{fontFamily: 'Cormorant Garamond, serif'}}>
-                      {edition.priceLocal?.toLocaleString()} {edition.currency}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            );
-          })}
+                <button className="w-full py-4 bg-[var(--french-navy)] text-white hover:bg-[var(--french-gold)] hover:text-[var(--french-navy)] transition-all duration-300 text-lg">
+                  {t('preorder')}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto max-w-6xl px-6">
+          <h2 className="text-4xl font-light text-center text-[var(--french-navy)] mb-12"
+              style={{fontFamily: 'Cormorant Garamond, serif'}}>
+            {t('features.title')}
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            {features.map((feature, idx) => (
+              <div key={idx} className="text-center">
+                <div className="text-5xl mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-medium text-[var(--french-navy)] mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-[var(--french-gray)] text-sm leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Ingredients Section */}
+      <section className="py-16">
+        <div className="container mx-auto max-w-6xl px-6">
+          <h2 className="text-4xl font-light text-center text-[var(--french-navy)] mb-12"
+              style={{fontFamily: 'Cormorant Garamond, serif'}}>
+            {t('ingredients.title')}
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {ingredients.map((ingredient, idx) => (
+              <div key={idx} className="bg-white p-8 border-l-4 border-[var(--french-gold)]">
+                <h3 className="text-2xl font-light text-[var(--french-navy)] mb-3"
+                    style={{fontFamily: 'Cormorant Garamond, serif'}}>
+                  {ingredient.name}
+                </h3>
+                <p className="text-[var(--french-gray)] leading-relaxed">
+                  {ingredient.benefit}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How to Use */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto max-w-4xl px-6">
+          <h2 className="text-4xl font-light text-center text-[var(--french-navy)] mb-12"
+              style={{fontFamily: 'Cormorant Garamond, serif'}}>
+            {t('howToUse.title')}
+          </h2>
+          <div className="space-y-6">
+            {[1, 2, 3, 4].map((step) => (
+              <div key={step} className="flex gap-6 items-start">
+                <div className="flex-shrink-0 w-12 h-12 bg-[var(--french-gold)] text-white rounded-full flex items-center justify-center text-xl font-light">
+                  {step}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-medium text-[var(--french-navy)] mb-2">
+                    {t(`howToUse.step${step}.title`)}
+                  </h3>
+                  <p className="text-[var(--french-gray)] leading-relaxed">
+                    {t(`howToUse.step${step}.desc`)}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

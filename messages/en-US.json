@@ -11,6 +11,38 @@
     "crowdfunding": "Crowdfunding",
     "about": "About"
   },
+  "about": {
+    "title": "About Belle Rêve",
+    "subtitle": "An innovative beauty brand connecting K-Beauty with global culture",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Belle Rêve combines K-Beauty's superior technology with each country's cultural identity to provide truly customized beauty experiences to customers worldwide. We don't just sell products - through Co-creation with our customers, we respect and embody the culture and values of each nation."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "We aim to establish ourselves as a leading brand in the global beauty market that respects cultural diversity. Where each country's unique beauty meets K-Beauty innovation, we help people around the world create their own special beauty stories."
+    },
+    "values": {
+      "title": "Core Values",
+      "cocreation": {
+        "title": "Co-creation",
+        "description": "We listen to our customers and create products together"
+      },
+      "cultural": {
+        "title": "Cultural Identity",
+        "description": "We respect and reflect each country's cultural identity and values"
+      },
+      "quality": {
+        "title": "Quality Excellence",
+        "description": "We provide verified Korean beauty technology and superior quality"
+      }
+    },
+    "cta": {
+      "title": "Join Us in Creating Beauty",
+      "description": "Participate in Belle Rêve's Co-creation community and create your own special edition together.",
+      "button": "Join Community"
+    }
+  },
   "home": {
     "hero": {
       "title": "K-Beauty Premium Edition\nEmbodying Your Culture",
@@ -111,5 +143,111 @@
     "backers": "Backers",
     "daysLeft": "Days Left",
     "supportNow": "Support Now"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Have questions about Belle Rêve or interested in collaboration? Feel free to reach out anytime.",
+    "form": {
+      "title": "Send Message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send"
+    },
+    "info": {
+      "title": "Contact Information"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "address": {
+      "label": "Address"
+    },
+    "social": {
+      "label": "Social Media"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekdays": "Weekdays",
+      "weekend": "Weekend",
+      "closed": "Closed"
+    }
+  },
+  "growth": {
+    "title": "Growth Plan",
+    "subtitle": "3-Year Phased Goals",
+    "chartTitle": "Revenue Growth Trend",
+    "year1": {
+      "period": "Year 1 (Introduction)",
+      "revenue": "300M KRW",
+      "goal": "Japan Market Validation & Brand Launch",
+      "actions": ["MVP Launch", "1,000 Community Members", "Crowdfunding Success"]
+    },
+    "year2": {
+      "period": "Year 2 (Expansion)",
+      "revenue": "700M KRW",
+      "goal": "Multi-country Expansion & Product Lineup Expansion",
+      "actions": ["France·USA Launch", "Toner·Cream Line Addition", "B2B Partnerships"]
+    },
+    "year3": {
+      "period": "Year 3 (Monetization)",
+      "revenue": "1.4B KRW",
+      "goal": "Global Brand Establishment & Monetization",
+      "actions": ["Clean·Vegan Line Addition", "Own Mall Enhancement", "Global Distribution Expansion"]
+    }
+  },
+  "products": {
+    "japan": {
+      "title": "Japan Limited Edition",
+      "subtitle": "Japanese Minimalism Edition",
+      "name": "All-in-One Essence - Whisper of Sakura",
+      "description": "A premium all-in-one essence born from the fusion of Japanese minimalism and K-beauty technology. A clean beauty product that minimizes skincare steps while delivering maximum results.",
+      "price": "7,800",
+      "volume": "100ml",
+      "preorder": "Pre-order Now",
+      "features": {
+        "title": "Key Features",
+        "minimalist": "Minimal Skincare: One bottle for toner, essence, and cream effects",
+        "clean": "Clean Beauty: No harmful ingredients, vegan certified",
+        "quality": "K-Beauty Technology: Proven Korean fermentation technology",
+        "cultural": "Japanese Culture: Sakura extract and rice fermentation ingredients"
+      },
+      "ingredients": {
+        "title": "Key Ingredients",
+        "sakura": {
+          "name": "Sakura Extract",
+          "benefit": "Skin soothing and brightening"
+        },
+        "rice": {
+          "name": "Fermented Rice Extract",
+          "benefit": "Deep hydration and elasticity boost"
+        },
+        "green-tea": {
+          "name": "Green Tea Extract",
+          "benefit": "Antioxidant and skin protection"
+        }
+      },
+      "story": {
+        "title": "Co-creation Story",
+        "content": "This product was created through a 6-month co-creation process with over 500 Japanese community members. Reflecting the voice of Japanese customers who wanted 'perfect skincare even on busy mornings,' we developed a minimal yet effective all-in-one essence.",
+        "cta": "View Co-creation Process"
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "Subscribe to Newsletter",
+      "description": "Get the latest news and special offers from Belle Rêve",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe"
+    },
+    "links": {
+      "product": "Product",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "copyright": "© 2024 Belle Rêve. All rights reserved."
   }
 }

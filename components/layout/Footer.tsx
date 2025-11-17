@@ -1,7 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BRAND } from '@/lib/constants/brand';
 
-export default function Footer({ locale = 'ko' }: { locale?: string }) {
+export default function Footer() {
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'ko';
+  
   const footerLinks = {
     product: [
       { label: 'All Editions', href: `/${locale}/editions` },

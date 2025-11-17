@@ -11,6 +11,38 @@
     "crowdfunding": "Financement participatif",
     "about": "À propos"
   },
+  "about": {
+    "title": "À propos de Belle Rêve",
+    "subtitle": "Une marque de beauté innovante reliant la K-Beauty à la culture mondiale",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Belle Rêve combine la technologie supérieure de la K-Beauty avec l'identité culturelle de chaque pays pour offrir des expériences beauté véritablement personnalisées aux clients du monde entier. Nous ne vendons pas simplement des produits - à travers la Co-création avec nos clients, nous respectons et incarnons la culture et les valeurs de chaque nation."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Nous visons à nous établir comme une marque leader sur le marché mondial de la beauté qui respecte la diversité culturelle. Là où la beauté unique de chaque pays rencontre l'innovation de la K-Beauty, nous aidons les gens du monde entier à créer leurs propres histoires de beauté spéciales."
+    },
+    "values": {
+      "title": "Valeurs Fondamentales",
+      "cocreation": {
+        "title": "Co-création",
+        "description": "Nous écoutons nos clients et créons des produits ensemble"
+      },
+      "cultural": {
+        "title": "Identité Culturelle",
+        "description": "Nous respectons et reflé tons l'identité culturelle et les valeurs de chaque pays"
+      },
+      "quality": {
+        "title": "Excellence Qualité",
+        "description": "Nous fournissons une technologie beauté coréenne vérifiée et une qualité supérieure"
+      }
+    },
+    "cta": {
+      "title": "Créez Avec Nous",
+      "description": "Participez à la communauté de Co-création Belle Rêve et créez ensemble votre édition spéciale.",
+      "button": "Rejoindre la Communauté"
+    }
+  },
   "home": {
     "hero": {
       "title": "Édition Premium K-Beauty\nIncarnant Votre Culture",
@@ -111,5 +143,111 @@
     "backers": "Contributeurs",
     "daysLeft": "Jours restants",
     "supportNow": "Soutenir maintenant"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "description": "Vous avez des questions sur Belle Rêve ou souhaitez collaborer ? N'hésitez pas à nous contacter.",
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Nom",
+      "email": "Email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer"
+    },
+    "info": {
+      "title": "Informations de contact"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "address": {
+      "label": "Adresse"
+    },
+    "social": {
+      "label": "Réseaux sociaux"
+    },
+    "hours": {
+      "title": "Heures d'ouverture",
+      "weekdays": "Jours de semaine",
+      "weekend": "Week-end",
+      "closed": "Fermé"
+    }
+  },
+  "growth": {
+    "title": "Plan de Croissance",
+    "subtitle": "Objectifs par phases sur 3 ans",
+    "chartTitle": "Tendance de Croissance du Chiffre d'Affaires",
+    "year1": {
+      "period": "Année 1 (Introduction)",
+      "revenue": "300M KRW",
+      "goal": "Validation du marché japonais et lancement de la marque",
+      "actions": ["Lancement MVP", "1,000 membres communauté", "Succès du financement participatif"]
+    },
+    "year2": {
+      "period": "Année 2 (Expansion)",
+      "revenue": "700M KRW",
+      "goal": "Expansion multi-pays et élargissement de la gamme de produits",
+      "actions": ["Lancement France·USA", "Ajout ligne Toner·Crème", "Partenariats B2B"]
+    },
+    "year3": {
+      "period": "Année 3 (Monétisation)",
+      "revenue": "1.4B KRW",
+      "goal": "Établissement de la marque mondiale et monétisation",
+      "actions": ["Ajout ligne Clean·Vegan", "Renforcement boutique propre", "Expansion distribution mondiale"]
+    }
+  },
+  "products": {
+    "japan": {
+      "title": "Édition Limitée Japon",
+      "subtitle": "Japanese Minimalism Edition",
+      "name": "Essence Tout-en-Un - Murmure de Sakura",
+      "description": "Une essence tout-en-un premium née de la fusion du minimalisme japonais et de la technologie K-beauty. Un produit de beauté propre qui minimise les étapes de soin tout en offrant des résultats maximaux.",
+      "price": "7,800",
+      "volume": "100ml",
+      "preorder": "Précommander",
+      "features": {
+        "title": "Caractéristiques Principales",
+        "minimalist": "Soin Minimaliste: Un flacon pour les effets tonique, essence et crème",
+        "clean": "Beauté Propre: Sans ingrédients nocifs, certifié vegan",
+        "quality": "Technologie K-Beauty: Technologie de fermentation coréenne éprouvée",
+        "cultural": "Culture Japonaise: Extrait de sakura et ingrédients de fermentation de riz"
+      },
+      "ingredients": {
+        "title": "Ingrédients Clés",
+        "sakura": {
+          "name": "Extrait de Sakura",
+          "benefit": "Apaisement et éclaircissement de la peau"
+        },
+        "rice": {
+          "name": "Extrait de Riz Fermenté",
+          "benefit": "Hydratation profonde et renforcement de l'élasticité"
+        },
+        "green-tea": {
+          "name": "Extrait de Thé Vert",
+          "benefit": "Antioxydant et protection de la peau"
+        }
+      },
+      "story": {
+        "title": "Histoire de Co-création",
+        "content": "Ce produit a été créé grâce à un processus de co-création de 6 mois avec plus de 500 membres de la communauté japonaise. Reflétant la voix des clients japonais qui souhaitaient 'un soin parfait même les matins pressés,' nous avons développé une essence tout-en-un minimaliste mais efficace.",
+        "cta": "Voir le Processus de Co-création"
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "S'abonner à la Newsletter",
+      "description": "Recevez les dernières nouvelles et offres spéciales de Belle Rêve",
+      "placeholder": "Entrez votre email",
+      "subscribe": "S'abonner"
+    },
+    "links": {
+      "product": "Produit",
+      "company": "Entreprise",
+      "support": "Support",
+      "legal": "Légal"
+    },
+    "copyright": "© 2024 Belle Rêve. Tous droits réservés."
   }
 }

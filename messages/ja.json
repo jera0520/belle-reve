@@ -8,39 +8,96 @@
     "home": "ホーム",
     "editions": "エディション",
     "community": "コミュニティ",
-    "crowdfunding": "クラウドファンディング",
     "about": "について"
+  },
+  "about": {
+    "title": "Belle Rêveについて",
+    "subtitle": "K-ビューティーとグローバル文化を繋ぐ革新的なビューティーブランド",
+    "mission": {
+      "title": "私たちのミッション",
+      "description": "Belle Rêveは、K-ビューティーの優れた技術力と各国の文化的アイデンティティを融合し、世界中のお客様に真のカスタマイズされた美容体験を提供します。単に製品を販売するのではなく、お客様と共に創り上げるCo-creationを通じて、各国の文化と価値を尊重し、表現します。"
+    },
+    "vision": {
+      "title": "私たちのビジョン",
+      "description": "グローバル美容市場において、文化的多様性を尊重する先導的なブランドとして確立することを目指します。各国固有の美しさとK-ビューティーのイノベーションが出会い、世界中の全ての人々が自分だけの特別な美容ストーリーを創造できるよう支援します。"
+    },
+    "values": {
+      "title": "コアバリュー",
+      "cocreation": {
+        "title": "共創 (Co-creation)",
+        "description": "お客様の声に耳を傾け、共に製品を創り上げます"
+      },
+      "cultural": {
+        "title": "文化的尊重 (Cultural Identity)",
+        "description": "各国の文化的アイデンティティと価値を尊重し反映します"
+      },
+      "quality": {
+        "title": "K-ビューティー品質 (Quality Excellence)",
+        "description": "検証された韓国の美容技術と優れた品質を提供します"
+      }
+    },
+    "cta": {
+      "title": "一緒に作りませんか?",
+      "description": "Belle RêveのCo-creationコミュニティに参加して、あなただけの特別なエディションを一緒に作りましょう。",
+      "button": "コミュニティに参加する"
+    }
   },
   "home": {
     "hero": {
       "title": "あなたの文化を込めた\nK-ビューティープレミアムエディション",
-      "subtitle": "国別お客様参加型Co-creationで作る特別なビューティー",
+      "subtitle": "K-ビューティーの検証された原料·技術 + 各国の文化的アイデンティティ反映",
+      "description": "国別に「自分だけのプレミアムエディション」を共同制作する化粧品ブランド",
       "cta": "エディションを探索",
       "ctaSecondary": "コミュニティに参加"
     },
-    "mission": {
-      "title": "私たちのミッション",
-      "subtitle": "K-ビューティーの優秀性と各国の文化的アイデンティティを結合し",
-      "description": "世界中のお客様と一緒に作る真のグローバルビューティーブランド"
-    },
-    "features": {
-      "feature1": {
-        "title": "文化的アイデンティティ",
-        "description": "各国の独特な文化と美意識を反映したデザイン"
+    "problem": {
+      "title": "なぜBelle Rêveが必要か",
+      "subtitle": "既存K-ビューティーが解決できなかった問題",
+      "issue1": {
+        "title": "現地化不足",
+        "description": "国別の肌環境·気候·生活習慣の違いを反映できていない"
       },
-      "feature2": {
-        "title": "お客様参加型開発",
-        "description": "現地のお客様と一緒に作るCo-creationプロセス"
+      "issue2": {
+        "title": "文化的理解不足",
+        "description": "文化的タブー·美容規制·消費価値の違いを適切に反映できていない"
       },
-      "feature3": {
-        "title": "検証されたK-ビューティー",
-        "description": "韓国の優秀な化粧品技術と原料活用"
+      "issue3": {
+        "title": "グローバルUX不足",
+        "description": "現地消費者が求めるデザイン·使用経験·パッケージング提供不足"
       }
+    },
+    "solution": {
+      "title": "Belle Rêveのソリューション",
+      "subtitle": "差別化された4つのアプローチ",
+      "usp1": {
+        "title": "顧客カスタマイズ現地化",
+        "description": "国別環境及び肌状態に対する徹底的な事前調査"
+      },
+      "usp2": {
+        "title": "Cultural Identity反映",
+        "description": "各国の文化的アイデンティティを込めたデザイン·香り·容器"
+      },
+      "usp3": {
+        "title": "K-ビューティー品質",
+        "description": "検証された韓国技術と優秀な品質 + 国別現地素材接木"
+      },
+      "usp4": {
+        "title": "Co-creationプラットフォーム",
+        "description": "顧客参加型製品開発で高い初期ロイヤルティ確保"
+      }
+    },
+    "market": {
+      "title": "目標市場",
+      "firstLaunch": "優先発売国: 日本",
+      "reason1": "ビューティー市場規模良好 (2024年約320億ドル、グローバル市場の5%)",
+      "reason2": "K-ビューティー好感度高い",
+      "reason3": "ミニマル·クリーンビューティー·品質中心志向とブランド哲学一致",
+      "mvp": "日本限定版オールインワンエッセンス"
     }
   },
   "editions": {
-    "title": "カルチャーエディション",
-    "subtitle": "国別の文化的アイデンティティを込めたプレミアムエディション",
+    "title": "Cultural Edition",
+    "subtitle": "国別文化的アイデンティティを込めたプレミアムエディション",
     "viewDetails": "詳しく見る",
     "inProgress": "開発中",
     "comingSoon": "発売予定",
@@ -48,68 +105,219 @@
     "project": "プロジェクト",
     "japan": {
       "name": "日本限定版オールインワンエッセンス",
-      "tagline": "ミニマル&クリーンビューティー",
-      "description": "日本のお客様のミニマリズムとクリーンビューティー哲学を込めたオールインワンエッセンス"
+      "tagline": "Minimal & Clean Beauty",
+      "description": "スキンケア段階最小化トレンド + クリーンビューティー強調",
+      "details": "日本のお客様のミニマリズムと品質中心志向を反映したオールインワンソリューション",
+      "features": [
+        "マルチ機能オールインワンフォーミュラ",
+        "クリーン認証成分",
+        "ミニマルパッケージデザイン",
+        "日本伝統素材活用"
+      ]
     },
     "france": {
-      "name": "フランスエディション",
-      "tagline": "優雅さと香りの芸術",
-      "description": "フランスの香水文化と優雅なデザイン感性"
+      "name": "2番目のプロジェクト",
+      "tagline": "Coming Soon",
+      "description": "準備中です"
     },
     "usa": {
-      "name": "アメリカエディション",
-      "tagline": "実用性と持続可能性",
-      "description": "乾燥した気候のための大容量実用製品"
-    },
-    "sea": {
-      "name": "東南アジアエディション",
-      "tagline": "トロピカルフレッシュ",
-      "description": "高温多湿な気候のためのさっぱりしたテクスチャー"
+      "name": "3番目のプロジェクト",
+      "tagline": "Coming Soon",
+      "description": "準備中です"
     }
   },
   "cocreation": {
-    "title": "一緒に作るビューティー",
-    "subtitle": "5段階Co-creationプロセス",
+    "title": "Co-creationプロセス",
+    "subtitle": "お客様と一緒に作る5段階開発過程",
     "step1": {
-      "title": "ユーザーリサーチ",
-      "description": "現地のお客様インタビューおよびアンケート調査"
+      "title": "Step 1: ユーザーリサーチ",
+      "description": "国別初期ユーザーリサーチ",
+      "methods": "オフラインFGD + Online Community + アンケート調査"
     },
     "step2": {
-      "title": "プロトタイプ開発",
-      "description": "3種のサンプル制作およびテスト"
+      "title": "Step 2: プロトタイプ開発",
+      "description": "1次プロトタイプ開発",
+      "methods": "サンプル3種制作及び品質テスト"
     },
     "step3": {
-      "title": "A/Bテスト",
-      "description": "国別消費者嗜好度調査"
+      "title": "Step 3: 消費者テスト",
+      "description": "国別消費者テスト",
+      "methods": "A/Bテストを通じた嗜好度検証"
     },
     "step4": {
-      "title": "共同制作",
-      "description": "デザイン・容器文化要素反映"
+      "title": "Step 4: 共同デザイン",
+      "description": "デザイン·容器共同制作",
+      "methods": "国別文化要素反映及び最終確定"
     },
     "step5": {
-      "title": "クラウドファンディング",
-      "description": "グローバルローンチおよび販売開始"
+      "title": "Step 5: グローバルローンチ",
+      "description": "クラウドファンディング + グローバルローンチ",
+      "methods": "現地プラットフォーム活用需要検証及び販売"
+    },
+    "benefits": {
+      "title": "参加特典",
+      "benefit1": "無料製品提供及び優先購入権",
+      "benefit2": "製品開発過程直接参加",
+      "benefit3": "コミュニティ特別リワード"
     }
   },
   "community": {
     "title": "コミュニティ",
     "subtitle": "一緒に作っていくビューティーブランド",
-    "joinCta": "コミュニティに加入する",
-    "benefits": {
-      "title": "参加特典",
-      "benefit1": "新製品優先体験",
-      "benefit2": "製品開発過程参加",
-      "benefit3": "特別割引およびリワード"
+    "joinCta": "コミュニティに加入する"
+  },
+  "roadmap": {
+    "title": "実行ロードマップ",
+    "subtitle": "体系的な12ヶ月実行計画",
+    "month1_2": {
+      "period": "1-2ヶ月",
+      "title": "市場リサーチ & コミュニティ構築",
+      "tasks": ["日本市場調査", "初期コミュニティ構成", "FGD進行"]
+    },
+    "month3_4": {
+      "period": "3-4ヶ月",
+      "title": "MVP開発 & サンプルテスト",
+      "tasks": ["プロトタイプ3種開発", "1次サンプルテスト", "フィードバック収集"]
+    },
+    "month5_6": {
+      "period": "5-6ヶ月",
+      "title": "日本エディション1次発売",
+      "tasks": ["最終製品確定", "パッケージデザイン", "製造パートナー確定"]
+    },
+    "month7_8": {
+      "period": "7-8ヶ月",
+      "title": "日本クラウドファンディング",
+      "tasks": ["CAMPFIREプラットフォームローンチ", "コミュニティ動員", "目標達成"]
+    },
+    "month9_10": {
+      "period": "9-10ヶ月",
+      "title": "マーケティング & SNS広告",
+      "tasks": ["インフルエンサー協業", "SNS広告執行", "ブランド認知度拡大"]
+    },
+    "month11_12": {
+      "period": "11-12ヶ月",
+      "title": "B2C拡張 & リテール入店",
+      "tasks": ["自社モールオープン", "セレクトショップ入店協議", "2次エディション準備"]
     }
   },
-  "crowdfunding": {
-    "title": "クラウドファンディング",
-    "subtitle": "一緒に作る最初のエディション",
-    "status": "進行中のファンディング",
-    "goalAmount": "目標金額",
-    "currentAmount": "現在達成",
-    "backers": "支援者",
-    "daysLeft": "残り期間",
-    "supportNow": "支援する"
+  "growth": {
+    "title": "成長計画",
+    "subtitle": "3ヶ年段階別目標",
+    "chartTitle": "売上成長推移",
+    "year1": {
+      "period": "1年目 (導入期)",
+      "revenue": "3億円",
+      "goal": "日本市場検証及びブランドローンチ",
+      "actions": ["MVP発売", "コミュニティ1,000人", "クラウドファンディング成功"]
+    },
+    "year2": {
+      "period": "2年目 (拡張期)",
+      "revenue": "7億円",
+      "goal": "多国家拡張及び製品ラインナップ拡大",
+      "actions": ["フランス·アメリカ進出", "トナー·クリームライン追加", "B2Bパートナーシップ"]
+    },
+    "year3": {
+      "period": "3年目 (収益化期)",
+      "revenue": "14億円",
+      "goal": "グローバルブランド確立及び収益化",
+      "actions": ["クリーン·ビーガンライン追加", "自社モール強化", "グローバル流通網拡大"]
+    }
+  },
+  "team": {
+    "title": "チーム",
+    "subtitle": "Belle Rêveを作る人々",
+    "member1": {
+      "name": "イ・セラ",
+      "role": "CEO & Co-Founder",
+      "bio": "K-ビューティー産業10年経験"
+    },
+    "member2": {
+      "name": "キム・ジンヒョン",
+      "role": "CTO & Co-Founder",
+      "bio": "グローバルプラットフォーム開発専門"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "description": "Belle Rêveについてご質問やコラボレーションのご希望がございましたら、お気軽にご連絡ください。",
+    "form": {
+      "title": "メッセージを送る",
+      "name": "お名前",
+      "email": "メールアドレス",
+      "subject": "件名",
+      "message": "メッセージ",
+      "submit": "送信"
+    },
+    "info": {
+      "title": "連絡先情報"
+    },
+    "email": {
+      "label": "メールアドレス"
+    },
+    "address": {
+      "label": "住所"
+    },
+    "social": {
+      "label": "ソーシャルメディア"
+    },
+    "hours": {
+      "title": "営業時間",
+      "weekdays": "平日",
+      "weekend": "週末",
+      "closed": "休業"
+    }
+  },
+  "products": {
+    "japan": {
+      "title": "日本限定版",
+      "subtitle": "Japanese Minimalism Edition",
+      "name": "オールインワンエッセンス - 桜のささやき",
+      "description": "日本のミニマリズムとK-ビューティー技術が出会って誕生したプレミアムオールインワンエッセンス。スキンケアのステップを最小限に抑えながら、最高の効果を提供するクリーンビューティー製品です。",
+      "price": "7,800",
+      "volume": "100ml",
+      "preorder": "予約注文",
+      "features": {
+        "title": "主な特徴",
+        "minimalist": "ミニマルスキンケア：1本でトナー・エッセンス・クリーム効果",
+        "clean": "クリーンビューティー：有害成分無添加、ビーガン認証",
+        "quality": "K-ビューティー技術：検証された韓国発酵技術適用",
+        "cultural": "日本文化の反映：桜抽出物と米発酵成分"
+      },
+      "ingredients": {
+        "title": "主要成分",
+        "sakura": {
+          "name": "桜抽出物",
+          "benefit": "肌の鎮静と明るさ改善"
+        },
+        "rice": {
+          "name": "米発酵抽出物",
+          "benefit": "深い保湿と弾力強化"
+        },
+        "green-tea": {
+          "name": "緑茶抽出物",
+          "benefit": "抗酸化と肌保護"
+        }
+      },
+      "story": {
+        "title": "Co-creationストーリー",
+        "content": "この製品は日本のコミュニティメンバー500名以上と6ヶ月間のCo-creationプロセスを経て誕生しました。「忙しい朝でも完璧なスキンケアをしたい」という日本のお客様の声を反映し、ミニマルながら効果的なオールインワンエッセンスを開発しました。",
+        "cta": "Co-creationプロセスを見る"
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "ニュースレター購読",
+      "description": "Belle Rêveの最新情報と特別オファーを受け取る",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "購読する"
+    },
+    "links": {
+      "product": "製品",
+      "company": "会社",
+      "support": "サポート",
+      "legal": "法的情報"
+    },
+    "copyright": "© 2024 Belle Rêve. All rights reserved."
   }
 }

@@ -1,0 +1,16 @@
+{
+  "name": "Belle Rêve - Cultural K-Beauty",
+  "short_name": "Belle Rêve",
+  "description": "Premium K-Beauty brand with cultural identity",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#1A2332",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

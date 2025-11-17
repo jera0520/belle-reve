@@ -11,35 +11,93 @@
     "crowdfunding": "크라우드펀딩",
     "about": "소개"
   },
+  "about": {
+    "title": "Belle Rêve 소개",
+    "subtitle": "K-뷰티와 글로벌 문화를 연결하는 혁신적인 뷰티 브랜드",
+    "mission": {
+      "title": "우리의 미션",
+      "description": "Belle Rêve는 K-뷰티의 우수한 기술력과 각국의 문화적 정체성을 결합하여, 전 세계 고객에게 진정한 의미의 맞춤형 뷰티 경험을 제공합니다. 우리는 단순히 제품을 판매하는 것이 아니라, 고객과 함께 만들어가는 Co-creation을 통해 각국의 문화와 가치를 존중하고 담아냅니다."
+    },
+    "vision": {
+      "title": "우리의 비전",
+      "description": "글로벌 뷰티 시장에서 문화적 다양성을 존중하는 선도적인 브랜드로 자리매김하고자 합니다. 각국의 고유한 아름다움과 K-뷰티의 혁신이 만나, 전 세계 모든 사람들이 자신만의 특별한 뷰티 스토리를 만들어갈 수 있도록 돕겠습니다."
+    },
+    "values": {
+      "title": "핵심 가치",
+      "cocreation": {
+        "title": "공동 창조 (Co-creation)",
+        "description": "고객의 목소리를 경청하고 함께 제품을 만들어갑니다"
+      },
+      "cultural": {
+        "title": "문화적 존중 (Cultural Identity)",
+        "description": "각국의 문화적 정체성과 가치를 존중하고 반영합니다"
+      },
+      "quality": {
+        "title": "K-뷰티 품질 (Quality Excellence)",
+        "description": "검증된 한국의 뷰티 기술과 우수한 품질을 제공합니다"
+      }
+    },
+    "cta": {
+      "title": "함께 만들어가실래요?",
+      "description": "Belle Rêve의 Co-creation 커뮤니티에 참여하여 여러분만의 특별한 에디션을 함께 만들어보세요.",
+      "button": "커뮤니티 참여하기"
+    }
+  },
   "home": {
     "hero": {
       "title": "당신의 문화를 담은\nK-뷰티 프리미엄 에디션",
-      "subtitle": "국가별 고객 참여형 Co-creation으로 만드는 특별한 뷰티",
+      "subtitle": "K-뷰티의 검증된 원료·기술 + 각국 문화 정체성(Cultural Identity) 반영",
+      "description": "국가별로 '나만의 프리미엄 에디션'을 공동 제작하는 화장품 브랜드",
       "cta": "에디션 탐색",
       "ctaSecondary": "커뮤니티 참여"
     },
-    "mission": {
-      "title": "우리의 미션",
-      "subtitle": "K-뷰티의 우수성과 각국의 문화적 정체성을 결합하여",
-      "description": "전 세계 고객과 함께 만드는 진정한 글로벌 뷰티 브랜드"
-    },
-    "features": {
-      "feature1": {
-        "title": "문화적 정체성",
-        "description": "각국의 독특한 문화와 미의식을 반영한 디자인"
+    "problem": {
+      "title": "왜 Belle Rêve가 필요한가",
+      "subtitle": "기존 K-뷰티가 해결하지 못한 문제들",
+      "issue1": {
+        "title": "현지화 부족",
+        "description": "국가별 피부환경·기후·생활습관 차이를 반영하지 못함"
       },
-      "feature2": {
-        "title": "고객 참여형 개발",
-        "description": "현지 고객과 함께 만드는 Co-creation 프로세스"
+      "issue2": {
+        "title": "문화적 이해 부족",
+        "description": "문화적 금기·미용 규제·소비 가치 차이를 제대로 반영하지 못함"
       },
-      "feature3": {
-        "title": "검증된 K-뷰티",
-        "description": "한국의 우수한 화장품 기술과 원료 활용"
+      "issue3": {
+        "title": "글로벌 UX 미흡",
+        "description": "현지 소비자가 원하는 디자인·사용 경험·패키징 제공 부족"
       }
+    },
+    "solution": {
+      "title": "Belle Rêve의 솔루션",
+      "subtitle": "차별화된 4가지 접근",
+      "usp1": {
+        "title": "고객 맞춤형 현지화",
+        "description": "국가별 환경 및 피부 상태에 대한 철저한 사전 조사"
+      },
+      "usp2": {
+        "title": "Cultural Identity 반영",
+        "description": "각국의 문화 정체성을 담은 디자인·향·용기"
+      },
+      "usp3": {
+        "title": "K-뷰티 품질",
+        "description": "검증된 한국 기술과 우수한 품질 + 국가별 현지 소재 접목"
+      },
+      "usp4": {
+        "title": "Co-creation 플랫폼",
+        "description": "고객 참여형 제품 개발로 높은 초기 충성도 확보"
+      }
+    },
+    "market": {
+      "title": "목표 시장",
+      "firstLaunch": "우선 출시국: 일본",
+      "reason1": "뷰티 시장 규모 양호 (2024년 약 320억 달러, 글로벌 시장의 5%)",
+      "reason2": "K-뷰티 호감도 높음",
+      "reason3": "미니멀·클린뷰티·품질 중심 성향과 브랜드 철학 부합",
+      "mvp": "MVP: 일본 한정판 올인원 에센스"
     }
   },
   "editions": {
-    "title": "문화 에디션",
+    "title": "Cultural Edition",
     "subtitle": "국가별 문화 정체성을 담은 프리미엄 에디션",
     "viewDetails": "자세히 보기",
     "inProgress": "개발 중",
@@ -48,8 +106,15 @@
     "project": "프로젝트",
     "japan": {
       "name": "일본 한정판 올인원 에센스",
-      "tagline": "미니멀 & 클린뷰티",
-      "description": "일본 고객의 미니멀리즘과 클린뷰티 철학을 담은 올인원 에센스"
+      "tagline": "Minimal & Clean Beauty",
+      "description": "스킨케어 단계 최소화 트렌드 + 클린뷰티 강조",
+      "details": "일본 고객의 미니멀리즘과 품질 중심 성향을 반영한 올인원 솔루션",
+      "features": [
+        "멀티 기능 올인원 포뮬러",
+        "클린 인증 성분",
+        "미니멀 패키징 디자인",
+        "일본 전통 소재 활용"
+      ]
     },
     "france": {
       "name": "프랑스 에디션",
@@ -68,27 +133,38 @@
     }
   },
   "cocreation": {
-    "title": "함께 만드는 뷰티",
-    "subtitle": "5단계 Co-creation 프로세스",
+    "title": "Co-creation 프로세스",
+    "subtitle": "고객과 함께 만드는 5단계 개발 과정",
     "step1": {
-      "title": "유저 리서치",
-      "description": "현지 고객 인터뷰 및 설문조사"
+      "title": "Step 1: 유저 리서치",
+      "description": "국가별 초기 유저 리서치",
+      "methods": "오프라인 FGD + Online Community + 설문조사"
     },
     "step2": {
-      "title": "프로토타입 개발",
-      "description": "3종의 샘플 제작 및 테스트"
+      "title": "Step 2: 프로토타입 개발",
+      "description": "1차 프로토타입 개발",
+      "methods": "샘플 3종 제작 및 품질 테스트"
     },
     "step3": {
-      "title": "A/B 테스트",
-      "description": "국가별 소비자 선호도 조사"
+      "title": "Step 3: 소비자 테스트",
+      "description": "국가별 소비자 테스트",
+      "methods": "A/B Test를 통한 선호도 검증"
     },
     "step4": {
-      "title": "공동 제작",
-      "description": "디자인·용기 문화 요소 반영"
+      "title": "Step 4: 공동 디자인",
+      "description": "디자인·용기 공동 제작",
+      "methods": "국가별 문화요소 반영 및 최종 확정"
     },
     "step5": {
-      "title": "크라우드펀딩",
-      "description": "글로벌 론칭 및 판매 시작"
+      "title": "Step 5: 글로벌 론칭",
+      "description": "크라우드펀딩 + 글로벌 론칭",
+      "methods": "현지 플랫폼 활용 수요 검증 및 판매"
+    },
+    "benefits": {
+      "title": "참여 혜택",
+      "benefit1": "무료 제품 제공 및 우선 구매권",
+      "benefit2": "제품 개발 과정 직접 참여",
+      "benefit3": "커뮤니티 특별 리워드"
     }
   },
   "community": {
@@ -111,5 +187,198 @@
     "backers": "후원자",
     "daysLeft": "남은 기간",
     "supportNow": "후원하기"
+  },
+  "roadmap": {
+    "title": "실행 로드맵",
+    "subtitle": "체계적인 12개월 실행 계획",
+    "month1_2": {
+      "period": "1-2개월",
+      "title": "시장 리서치 & 커뮤니티 구축",
+      "tasks": ["일본 시장 조사", "초기 커뮤니티 구성", "FGD 진행"]
+    },
+    "month3_4": {
+      "period": "3-4개월",
+      "title": "MVP 개발 & 샘플 테스트",
+      "tasks": ["프로토타입 3종 개발", "1차 샘플 테스트", "피드백 수집"]
+    },
+    "month5_6": {
+      "period": "5-6개월",
+      "title": "일본 에디션 1차 출시",
+      "tasks": ["최종 제품 확정", "패키징 디자인", "제조 파트너 확정"]
+    },
+    "month7_8": {
+      "period": "7-8개월",
+      "title": "일본 크라우드펀딩",
+      "tasks": ["CAMPFIRE 플랫폼 런칭", "커뮤니티 동원", "목표 달성"]
+    },
+    "month9_10": {
+      "period": "9-10개월",
+      "title": "마케팅 & SNS 광고",
+      "tasks": ["인플루언서 협업", "SNS 광고 집행", "브랜드 인지도 확대"]
+    },
+    "month11_12": {
+      "period": "11-12개월",
+      "title": "B2C 확장 & 리테일 입점",
+      "tasks": ["자사몰 오픈", "편집숍 입점 협의", "2차 에디션 준비"]
+    }
+  },
+  "growth": {
+    "title": "성장 계획",
+    "subtitle": "3개년 단계별 목표",
+    "chartTitle": "매출 성장 추이",
+    "year1": {
+      "period": "1년 차 (도입기)",
+      "revenue": "3억 원",
+      "goal": "일본 시장 검증 및 브랜드 론칭",
+      "actions": ["MVP 출시", "커뮤니티 1,000명", "크라우드펀딩 성공"]
+    },
+    "year2": {
+      "period": "2년 차 (확장기)",
+      "revenue": "7억 원",
+      "goal": "다국가 확장 및 제품 라인업 확대",
+      "actions": ["프랑스·미국 진출", "토너·크림 라인 추가", "B2B 파트너십"]
+    },
+    "year3": {
+      "period": "3년 차 (수익화기)",
+      "revenue": "14억 원",
+      "goal": "글로벌 브랜드 확립 및 수익화",
+      "actions": ["클린·비건 라인 추가", "자사몰 강화", "글로벌 유통망 확대"]
+    }
+  },
+  "ProductCustomizer": {
+    "title": "나만의 제품 커스터마이징",
+    "scent": "향",
+    "packaging": "패키징",
+    "texture": "텍스처",
+    "yourSelection": "선택한 옵션",
+    "saveCustomization": "커스터마이징 저장",
+    "scents": {
+      "cherry-blossom": "벚꽃",
+      "green-tea": "녹차",
+      "yuzu": "유자",
+      "hinoki": "편백"
+    },
+    "packagings": {
+      "minimalist": "미니멀",
+      "traditional": "전통",
+      "modern": "모던",
+      "luxury": "럭셔리"
+    },
+    "textures": {
+      "light": "가벼운",
+      "rich": "풍부한",
+      "gel": "젤",
+      "cream": "크림"
+    }
+  },
+  "CommunityFeed": {
+    "shareYourThoughts": "여러분의 생각을 공유해주세요...",
+    "post": "게시하기"
+  },
+  "Newsletter": {
+    "title": "뉴스레터 구독",
+    "description": "새로운 에디션 출시 소식과 특별 혜택을 가장 먼저 받아보세요",
+    "emailPlaceholder": "이메일을 입력하세요",
+    "subscribe": "구독하기",
+    "thankYou": "구독해주셔서 감사합니다!"
+  },
+  "team": {
+    "title": "팀 소개",
+    "subtitle": "Belle Rêve를 만들어가는 사람들",
+    "members": {
+      "sera": {
+        "name": "이세라",
+        "role": "공동 창업자 & CEO",
+        "bio": "K-뷰티와 글로벌 문화를 연결하는 비전을 가진 리더"
+      },
+      "jinhyeon": {
+        "name": "김진현",
+        "role": "공동 창업자 & CTO",
+        "bio": "기술과 디자인으로 브랜드 경험을 혁신하는 개발자"
+      }
+    }
+  },
+  "contact": {
+    "title": "문의하기",
+    "description": "Belle Rêve에 대해 궁금하신 점이 있으시거나 협업을 원하시나요? 언제든지 연락 주세요.",
+    "form": {
+      "title": "메시지 보내기",
+      "name": "이름",
+      "email": "이메일",
+      "subject": "제목",
+      "message": "메시지",
+      "submit": "보내기"
+    },
+    "info": {
+      "title": "연락처 정보"
+    },
+    "email": {
+      "label": "이메일"
+    },
+    "address": {
+      "label": "주소"
+    },
+    "social": {
+      "label": "소셜 미디어"
+    },
+    "hours": {
+      "title": "운영 시간",
+      "weekdays": "평일",
+      "weekend": "주말",
+      "closed": "휴무"
+    }
+  },
+  "products": {
+    "japan": {
+      "title": "일본 한정판",
+      "subtitle": "Japanese Minimalism Edition",
+      "name": "올인원 에센스 - 벚꽃의 속삭임",
+      "description": "일본의 미니멀리즘과 K-뷰티 기술이 만나 탄생한 프리미엄 올인원 에센스. 스킨케어 단계를 최소화하면서도 최상의 효과를 제공하는 클린뷰티 제품입니다.",
+      "price": "7,800",
+      "volume": "100ml",
+      "preorder": "사전 주문하기",
+      "features": {
+        "title": "주요 특징",
+        "minimalist": "미니멀 스킨케어: 한 병으로 토너·에센스·크림 효과",
+        "clean": "클린뷰티: 유해 성분 무첨가, 비건 인증",
+        "quality": "K-뷰티 기술: 검증된 한국 발효 기술 적용",
+        "cultural": "일본 문화 반영: 벚꽃 추출물과 쌀 발효 성분"
+      },
+      "ingredients": {
+        "title": "핵심 성분",
+        "sakura": {
+          "name": "벚꽃 추출물",
+          "benefit": "피부 진정 및 밝기 개선"
+        },
+        "rice": {
+          "name": "쌀 발효 추출물",
+          "benefit": "깊은 보습과 탄력 강화"
+        },
+        "green-tea": {
+          "name": "녹차 추출물",
+          "benefit": "항산화 및 피부 보호"
+        }
+      },
+      "story": {
+        "title": "Co-creation 스토리",
+        "content": "이 제품은 일본 커뮤니티 멤버 500여명과 함께 6개월간의 Co-creation 과정을 거쳐 탄생했습니다. '바쁜 아침에도 완벽한 스킨케어를 하고 싶다'는 일본 고객들의 목소리를 담아, 미니멀하면서도 효과적인 올인원 에센스를 개발했습니다.",
+        "cta": "Co-creation 과정 보기"
+      }
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "title": "뉴스레터 구독",
+      "description": "Belle Rêve의 최신 소식과 특별 혜택을 받아보세요",
+      "placeholder": "이메일 주소를 입력하세요",
+      "subscribe": "구독하기"
+    },
+    "links": {
+      "product": "제품",
+      "company": "회사",
+      "support": "지원",
+      "legal": "법적 정보"
+    },
+    "copyright": "© 2024 Belle Rêve. All rights reserved."
   }
 }

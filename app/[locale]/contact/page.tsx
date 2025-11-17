@@ -1,231 +1,186 @@
-import { BRAND } from '@/lib/constants/brand';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export default function ContactPage() {
+  const t = useTranslations();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Form submission logic here
+    console.log('Form submitted:', formData);
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl opacity-90">
-            궁금한 점이 있으신가요? 언제든지 문의해 주세요.
+    <div className="min-h-screen bg-[var(--french-cream)] pt-24 pb-16">
+      {/* Hero Section */}
+      <div className="max-w-6xl mx-auto px-6 mb-16">
+        <div className="text-center mb-12">
+          <h1 className="text-6xl md:text-7xl font-light mb-4 text-[var(--french-navy)]" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            {t('contact.title')}
+          </h1>
+          <div className="w-24 h-[1px] bg-[var(--french-gold)] mx-auto mb-6"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            {t('contact.description')}
           </p>
         </div>
-      </section>
+      </div>
 
-      {/* Contact Methods */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-5xl mb-4">📧</div>
-              <h3 className="text-xl font-bold mb-3">Email</h3>
-              <p className="text-gray-600 mb-4">
-                일반 문의 및 파트너십
-              </p>
-              <a href={`mailto:${BRAND.contact.email}`} className="text-purple-600 font-semibold hover:underline">
-                {BRAND.contact.email}
-              </a>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-5xl mb-4">📞</div>
-              <h3 className="text-xl font-bold mb-3">Phone</h3>
-              <p className="text-gray-600 mb-4">
-                평일 10:00 - 18:00
-              </p>
-              <a href={`tel:${BRAND.contact.phone}`} className="text-purple-600 font-semibold hover:underline">
-                {BRAND.contact.phone}
-              </a>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-              <div className="text-5xl mb-4">📍</div>
-              <h3 className="text-xl font-bold mb-3">Office</h3>
-              <p className="text-gray-600">
-                {BRAND.contact.address}
-              </p>
-            </div>
-          </div>
-
+      {/* Contact Form & Info */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold mb-8 text-center">Send us a Message</h2>
+          <div className="bg-white p-10 rounded-lg shadow-md">
+            <h2 className="text-3xl font-light mb-6 text-[var(--french-navy)]" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+              {t('contact.form.title')}
+            </h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('contact.form.name')}
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--french-gold)] focus:border-transparent transition-all"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                />
+              </div>
               
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-semibold mb-2">이름 *</label>
-                    <input
-                      type="text"
-                      required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none"
-                      placeholder="홍길동"
-                    />
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('contact.form.email')}
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--french-gold)] focus:border-transparent transition-all"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('contact.form.subject')}
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--french-gold)] focus:border-transparent transition-all"
+                  value={formData.subject}
+                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
+                />
+              </div>
+              
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  {t('contact.form.message')}
+                </label>
+                <textarea
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[var(--french-gold)] focus:border-transparent transition-all resize-none"
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-[var(--french-navy)] text-white py-4 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 font-medium tracking-wide"
+              >
+                {t('contact.form.submit')}
+              </button>
+            </form>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="bg-white p-10 rounded-lg shadow-md">
+              <h2 className="text-3xl font-light mb-6 text-[var(--french-navy)]" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                {t('contact.info.title')}
+              </h2>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[var(--french-cream)] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-[var(--french-gold)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold mb-2">이메일 *</label>
-                    <input
-                      type="email"
-                      required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none"
-                      placeholder="hello@example.com"
-                    />
+                    <h3 className="text-lg font-semibold mb-1 text-[var(--french-navy)]">
+                      {t('contact.email.label')}
+                    </h3>
+                    <a href="mailto:contact@bellereve.com" className="text-[var(--french-gold)] hover:underline">
+                      contact@bellereve.com
+                    </a>
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold mb-2">전화번호</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none"
-                    placeholder="010-1234-5678"
-                  />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[var(--french-cream)] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-[var(--french-gold)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1 text-[var(--french-navy)]">
+                      {t('contact.address.label')}
+                    </h3>
+                    <p className="text-gray-700">
+                      Seoul, South Korea
+                    </p>
+                  </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-semibold mb-2">문의 유형 *</label>
-                  <select
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none"
-                  >
-                    <option value="">선택해주세요</option>
-                    <option value="general">일반 문의</option>
-                    <option value="partnership">파트너십 제안</option>
-                    <option value="cocreation">Co-creation 참여</option>
-                    <option value="product">제품 문의</option>
-                    <option value="support">고객 지원</option>
-                  </select>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[var(--french-cream)] rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-[var(--french-gold)]" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold mb-1 text-[var(--french-navy)]">
+                      {t('contact.social.label')}
+                    </h3>
+                    <div className="space-y-1">
+                      <p><a href="https://instagram.com/bellereve" className="text-[var(--french-gold)] hover:underline">@bellereve</a></p>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
 
-                <div>
-                  <label className="block text-sm font-semibold mb-2">메시지 *</label>
-                  <textarea
-                    required
-                    rows={6}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-purple-500 focus:outline-none"
-                    placeholder="문의 내용을 자세히 작성해주세요..."
-                  />
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    required
-                    className="mt-1 w-5 h-5 text-purple-600 rounded"
-                  />
-                  <label className="text-sm text-gray-600">
-                    개인정보 수집 및 이용에 동의합니다. (필수)
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-bold text-lg hover:shadow-lg transition"
-                >
-                  문의 보내기
-                </button>
-              </form>
+            {/* Business Hours */}
+            <div className="bg-gradient-to-br from-[var(--french-navy)] to-[var(--french-gold)] p-10 rounded-lg shadow-md text-white">
+              <h3 className="text-2xl font-light mb-4" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                {t('contact.hours.title')}
+              </h3>
+              <div className="space-y-2 text-sm">
+                <p className="flex justify-between">
+                  <span>{t('contact.hours.weekdays')}</span>
+                  <span>9:00 - 18:00</span>
+                </p>
+                <p className="flex justify-between">
+                  <span>{t('contact.hours.weekend')}</span>
+                  <span>{t('contact.hours.closed')}</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold mb-12 text-center">자주 묻는 질문</h2>
-          
-          <div className="space-y-4">
-            <details className="bg-gray-50 rounded-xl p-6 group">
-              <summary className="font-bold text-lg cursor-pointer flex justify-between items-center">
-                Co-creation에 어떻게 참여하나요?
-                <span className="text-purple-600">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                커뮤니티 페이지에서 진행 중인 A/B 테스트와 설문에 참여하실 수 있습니다. 
-                회원가입 후 즉시 참여 가능하며, 참여 시 다양한 혜택이 제공됩니다.
-              </p>
-            </details>
-
-            <details className="bg-gray-50 rounded-xl p-6 group">
-              <summary className="font-bold text-lg cursor-pointer flex justify-between items-center">
-                제품은 언제 출시되나요?
-                <span className="text-purple-600">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                일본 에디션은 2025년 상반기 크라우드펀딩을 통해 선출시될 예정입니다. 
-                프랑스, 미국 에디션은 2025년 하반기 출시 예정입니다.
-              </p>
-            </details>
-
-            <details className="bg-gray-50 rounded-xl p-6 group">
-              <summary className="font-bold text-lg cursor-pointer flex justify-between items-center">
-                파트너십 문의는 어떻게 하나요?
-                <span className="text-purple-600">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                {BRAND.contact.email}로 파트너십 제안서를 보내주시거나, 
-                위 문의 폼에서 '파트너십 제안'을 선택하여 문의해주세요.
-              </p>
-            </details>
-
-            <details className="bg-gray-50 rounded-xl p-6 group">
-              <summary className="font-bold text-lg cursor-pointer flex justify-between items-center">
-                제품의 성분은 안전한가요?
-                <span className="text-purple-600">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                모든 제품은 비건, 크루얼티프리 인증을 받았으며, 
-                성분 100%를 공개합니다. EWG Green 등급 성분만 사용하며, 
-                피부 자극 테스트와 알레르기 테스트를 완료했습니다.
-              </p>
-            </details>
-
-            <details className="bg-gray-50 rounded-xl p-6 group">
-              <summary className="font-bold text-lg cursor-pointer flex justify-between items-center">
-                해외 배송이 가능한가요?
-                <span className="text-purple-600">+</span>
-              </summary>
-              <p className="mt-4 text-gray-600 leading-relaxed">
-                네, 전 세계 배송 가능합니다. 각 에디션은 해당 국가에서 우선 출시되며, 
-                이후 글로벌 배송이 시작됩니다. 배송비 및 소요 기간은 지역에 따라 다릅니다.
-              </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Media */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Follow Us
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            소셜 미디어에서 {BRAND.name}의 최신 소식을 만나보세요
-          </p>
-          <div className="flex justify-center gap-6">
-            <a href={BRAND.social.instagram} target="_blank" rel="noopener noreferrer" 
-               className="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition">
-              <span className="text-3xl">📷</span>
-            </a>
-            <a href={BRAND.social.facebook} target="_blank" rel="noopener noreferrer"
-               className="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition">
-              <span className="text-3xl">📘</span>
-            </a>
-            <a href={BRAND.social.twitter} target="_blank" rel="noopener noreferrer"
-               className="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition">
-              <span className="text-3xl">🐦</span>
-            </a>
-            <a href={BRAND.social.youtube} target="_blank" rel="noopener noreferrer"
-               className="w-16 h-16 bg-white/20 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/30 transition">
-              <span className="text-3xl">▶️</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
